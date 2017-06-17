@@ -1,0 +1,27 @@
+version: "2"
+
+networks:
+  custom:
+    driver: bridge
+
+services:
+
+  proxy:
+    image: h3nrik/nginx-ldap:1.11.3
+    container_name: proxy
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - custom
+    ports:
+      - "8080:8080"
+
+  openldap:
+    container_name: openldap
+    build: ./openldap
+    networks:
+      - custom
+    environment:
+      - LDAP_ORGANISATION=MVP
+      - LDAP_DOMAIN=mvp.org
+      - LDAP_ADMIN_PASSWORD=admin
