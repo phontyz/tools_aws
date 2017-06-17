@@ -15,6 +15,8 @@ services:
       - custom
     ports:
       - "8080:8080"
+    links:
+      - grafana
 
   openldap:
     container_name: openldap
@@ -77,3 +79,17 @@ services:
     container_name: node_exporter
     networks:
       - custom
+
+  grafana:
+    image: grafana/grafana:4.3.2
+    container_name: grafana
+    networks:
+      - custom
+    environment:
+      - GF_AUTH_BASIC_ENABLED=false
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SERVER_ROOT_URL=http://127.0.0.1:8080/grafana
+    depends_on:
+      - prometheus
+    expose:
+      - "3000"
