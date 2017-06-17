@@ -25,3 +25,11 @@ services:
       - LDAP_ORGANISATION=MVP
       - LDAP_DOMAIN=mvp.org
       - LDAP_ADMIN_PASSWORD=admin
+  
+  jenkins:
+    build: jenkins_master/
+    container_name: jenkins
+    networks:
+      - custom
+    environment:
+      - JENKINS_OPTS=--prefix=/jenkins
