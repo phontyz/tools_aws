@@ -11,6 +11,7 @@ services:
     container_name: proxy
     volumes:
       - ./proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./proxy/html:/usr/local/nginx/html:ro
     networks:
       - custom
     ports:
