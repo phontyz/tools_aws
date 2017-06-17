@@ -50,3 +50,13 @@ services:
       - "SLAVE_NAME=test"
       - "SLAVE_LABELS=test"
       - "SLAVE_MODE=exclusive"
+  
+  gogs:
+    image: gogs/gogs:0.11.4
+    container_name: gogs
+    networks:
+      - custom
+    expose:
+      - "3000"
+    volumes:
+      - "./gogs/conf:/data/gogs/conf"
