@@ -33,3 +33,20 @@ services:
       - custom
     environment:
       - JENKINS_OPTS=--prefix=/jenkins
+
+  jenkins_slave:
+    build: jenkins_slave/
+    container_name: jenkins_slave
+    networks:
+      - custom
+    depends_on:
+      - jenkins
+    environment:
+      - "SWARM_MASTER=http://jenkins:8080/jenkins/"
+      - "SLAVE_EXECUTORS=2"
+      - "SLAVE_DESCRIPTION=test"
+      - "SWARM_USER=test"
+      - "SWARM_PASSWORD=t3st"
+      - "SLAVE_NAME=test"
+      - "SLAVE_LABELS=test"
+      - "SLAVE_MODE=exclusive"
