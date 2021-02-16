@@ -3,7 +3,7 @@ FROM jenkins/jenkins:centos7
 COPY plugins.txt /usr/share/jenkins/
 RUN /usr/local/bin/install-plugins.sh $(cat /usr/share/jenkins/plugins.txt)
 
-ENV JENKINS_SWARM_PLUGIN_VERSION=2.2
+ENV JENKINS_SWARM_PLUGIN_VERSION=3.24
 
 USER root
 
@@ -12,7 +12,7 @@ RUN curl -s -o /bin/swarm-client.jar \
 
 COPY wait-for.sh /usr/share/jenkins/
 
-#RUN chmod -R 777 /usr/share/jenkins/
+RUN chmod -R 777 /usr/share/jenkins/
 
 CMD /usr/share/jenkins/wait-for.sh jenkins:50000 -- java -jar /bin/swarm-client.jar -executors ${SLAVE_EXECUTORS} -description "${SLAVE_DESCRIPTION}" -master ${SWARM_MASTER} -username ${SWARM_USER} -password ${SWARM_PASSWORD} -name "${SLAVE_NAME}" -labels "${SLAVE_LABELS}" -mode ${SLAVE_MODE}
 
