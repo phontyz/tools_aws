@@ -7,7 +7,7 @@ networks:
 services:
 
   proxy:
-    image: pinepain/ldap-auth-proxy:latest
+    image: apifocal/nginx-proxy-auth-ldap:1.11.3-r4
     container_name: proxy
     volumes:
       - ./proxy/nginx.conf:/etc/nginx/nginx.conf:ro
