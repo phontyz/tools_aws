@@ -1,4 +1,4 @@
-FROM jenkins:2.32.3-alpine
+FROM jenkins/jenkins:centos7
 
 ENV JENKINS_SLAVE_AGENT_PORT 50000
 
