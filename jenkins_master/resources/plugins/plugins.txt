@@ -3,4 +3,4 @@ swarm:3.24
 prometheus:2.0.8
 ldap:2.3
 workflow-job:2.40
-git:3.3.0
+git:4.6.0
