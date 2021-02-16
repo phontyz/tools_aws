@@ -7,7 +7,7 @@ networks:
 services:
 
   proxy:
-    image: h3nrik/nginx-ldap:1.11.3
+    image: pinepain/ldap-auth-proxy:latest
     container_name: proxy
     volumes:
       - ./proxy/nginx.conf:/etc/nginx/nginx.conf:ro
@@ -55,7 +55,7 @@ services:
       - "SLAVE_MODE=exclusive"
   
   gogs:
-    image: gogs/gogs:0.11.4
+    image: gogs/gogs:latest
     container_name: gogs
     networks:
       - custom
@@ -65,24 +65,25 @@ services:
       - "./gogs/conf:/data/gogs/conf"
 
   prometheus:
-    image: prom/prometheus:v1.5.2
+    image: prom/prometheus:latest
     container_name: prometheus
     networks:
       - custom
     volumes:
-      - ./prometheus/:/etc/prometheus/
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+#      - prometheus_data:/prometheus
     command:
-      - "-web.external-url=http://127.0.0.1:8080/prometheus"
-      - "-config.file=/etc/prometheus/prometheus.yml"
+      - "--web.external-url=http://127.0.0.1:8080/prometheus"
+      - "--config.file=/etc/prometheus/prometheus.yml"
 
   node_exporter:
-    image: prom/node-exporter:v0.13.0
+    image: prom/node-exporter:latest
     container_name: node_exporter
     networks:
       - custom
 
   grafana:
-    image: grafana/grafana:4.3.2
+    image: grafana/grafana:latest
     container_name: grafana
     networks:
       - custom
