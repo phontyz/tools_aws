@@ -61,8 +61,11 @@ services:
       - custom
     expose:
       - "3000"
+    ports:
+      - "10022:22"
+      - "3000:3000"
     volumes:
-      - "./gogs/conf:/data/gogs/conf"
+      - "./gogs/conf:/data"
 
   prometheus:
     image: prom/prometheus:latest
