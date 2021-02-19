@@ -1,0 +1,18 @@
+2021/02/18 09:41:04 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/02/18 09:53:00 gogs.io/gogs/internal/db/users.go:93 record not found
+[0.103ms] [rows:0] SELECT * FROM `user` WHERE lower_name = "[c[d" ORDER BY `user`.`id` LIMIT 1
+2021/02/18 09:53:00 gogs.io/gogs/internal/db/access_tokens.go:140 record not found
+[0.485ms] [rows:0] SELECT * FROM `access_token` WHERE sha1 = "[C[D" ORDER BY `access_token`.`id` LIMIT 1
+2021/02/18 10:06:00 gogs.io/gogs/internal/db/repos.go:135 record not found
+[0.339ms] [rows:0] SELECT * FROM `repository` WHERE owner_id = 1 AND lower_name = "test_repo" ORDER BY `repository`.`id` LIMIT 1
+2021/02/18 10:39:00 gogs.io/gogs/internal/db/users.go:93 record not found
+[0.107ms] [rows:0] SELECT * FROM `user` WHERE lower_name = "sdf" ORDER BY `user`.`id` LIMIT 1
+2021/02/18 10:39:00 gogs.io/gogs/internal/db/access_tokens.go:140 record not found
+[0.071ms] [rows:0] SELECT * FROM `access_token` WHERE sha1 = "sdf" ORDER BY `access_token`.`id` LIMIT 1
+2021/02/18 13:45:54 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/02/18 14:17:00 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/02/18 15:23:00 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)

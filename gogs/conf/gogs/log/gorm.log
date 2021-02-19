@@ -1,6 +1,8 @@
-2021/02/17 08:29:10 gogs.io/gogs/internal/db/users.go:93
+2021/02/19 08:40:00 gogs.io/gogs/internal/db/users.go:321
 [warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
-2021/02/17 08:38:48 gogs.io/gogs/internal/db/two_factors.go:106 record not found
-[0.218ms] [rows:0] SELECT * FROM `two_factor` WHERE user_id = 1 ORDER BY `two_factor`.`id` LIMIT 1
-2021/02/17 14:29:29 gogs.io/gogs/internal/db/users.go:93
+2021/02/19 12:12:00 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/02/19 12:46:52 gogs.io/gogs/internal/db/users.go:321
+[warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)
+2021/02/19 13:12:13 gogs.io/gogs/internal/db/users.go:321
 [warn] Model gogs.io/gogs/internal/db.User don't match BeforeUpdateInterface, should be BeforeUpdate(*gorm.DB)

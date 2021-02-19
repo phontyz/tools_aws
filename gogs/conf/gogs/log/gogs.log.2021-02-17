@@ -1,0 +1,16 @@
+2021/02/17 08:18:47 [ INFO] Gogs 0.13.0+dev
+2021/02/17 08:18:47 [ INFO] Git config user.name set to Gogs
+2021/02/17 08:18:47 [ INFO] Git config user.email set to gogs@fake.local
+2021/02/17 08:18:47 [ INFO] Run mode: Production
+2021/02/17 08:18:47 [ INFO] First-time run install finished!
+2021/02/17 12:59:22 [ INFO] Gogs 0.13.0+dev
+2021/02/17 12:59:22 [ INFO] Run mode: Production
+2021/02/17 12:59:22 [ INFO] Listen on http://0.0.0.0:3000
+2021/02/17 15:50:55 [ WARN] HTTP.getGitRepoPath: stat /data/git/gogs-repositories/bootcampredteam/firstrepo/.git: no such file or directory
+2021/02/17 15:51:00 [ WARN] HTTP.getGitRepoPath: stat /data/git/gogs-repositories/bootcampredteam/firstrepo/.git: no such file or directory
+2021/02/17 18:05:44 [ INFO] Gogs 0.13.0+dev
+2021/02/17 18:05:44 [ INFO] Run mode: Production
+2021/02/17 18:05:45 [ INFO] Listen on http://0.0.0.0:3000
+2021/02/17 18:23:39 [ INFO] Gogs 0.13.0+dev
+2021/02/17 18:23:39 [ INFO] Run mode: Production
+2021/02/17 18:23:40 [ INFO] Listen on http://0.0.0.0:3000

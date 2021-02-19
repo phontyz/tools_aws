@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 
 networks:
   custom:
@@ -34,8 +34,13 @@ services:
     container_name: jenkins
     networks:
       - custom
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /srv/www/jenkins:/var/jenkins_home
     environment:
       - JENKINS_OPTS=--prefix=/jenkins
+      - "HOST_UID=1000"
+      - "HOST_GID=994"
 
   jenkins_slave:
     build: jenkins_slave/

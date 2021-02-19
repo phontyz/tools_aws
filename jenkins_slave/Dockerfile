@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:centos7
+FROM jenkins/jenkins:latest
 
 COPY plugins.txt /usr/share/jenkins/
 RUN /usr/local/bin/install-plugins.sh $(cat /usr/share/jenkins/plugins.txt)

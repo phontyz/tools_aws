@@ -4,3 +4,4 @@ prometheus:2.0.8
 ldap:2.3
 workflow-job:2.40
 git:4.6.0
+gogs-webhook:1.0.15
